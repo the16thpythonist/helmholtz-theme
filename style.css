@@ -1,0 +1,324 @@
+/*
+Theme Name: Zerif Pro Child
+Theme URI: https://www.themeisle.com/
+Description: This is a custom child theme I have created.
+Author: ThemeIsle
+URI: https://www.themeisle.com/
+Template: venture-lite
+Version: 0.1
+*/
+
+body {
+    font-family: corporate-regular, 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* HEADER */
+header {background:rgb(0, 90, 160);font-family: 'Oswald', sans-serif;}
+header span.tagline{font-size:17px;color: rgb(240, 120, 30);}
+
+nav {background:rgb(0, 90, 160); line-height: 1.4em}
+/* rgb(140, 180, 35) */
+
+/* This is the classic helmholtz font with the cornered edges of the letters */
+@font-face {
+    font-family: Hermann-Bold;
+    src:    url('Hermann-Bold.woff2') format('woff2')
+}
+
+/* This font is used by the helmholtz main website as the regular font across all pages */
+@font-face {
+    font-family: corporate-regular;
+    src: url('corporate_s_regular.woff') format('woff');
+}
+
+/* This is the sans serif font used for the letters of the MTDTS logo */
+@font-face {
+    font-family: Anton;
+    src: url('Anton-Regular.ttf');
+}
+
+.helmholtz-bar {
+    margin: 0;
+    margin-top: -5px;
+    height: 120px;
+    background-color: white;
+}
+
+.helmholtz-bar-inner {
+    position: relative;
+    float: right;
+    top: 95px;
+    height: 25px;
+    width: 45%;
+    background-color: rgb(0, 90, 160);
+}
+
+.helmholtz-img-container {
+    position: relative;
+    top: 25px;
+    left: 60%;
+    margin-right: 30px;
+    height: 8px;
+    width: 300px;
+}
+
+/* THE CONTAINER FOR THE LOGO
+Pulls the actual logo container upwards, so that is slightly overlaps with the upper blue edge */
+div.col-sm-6.col-sm-pull-6 {
+    margin-top: -91px;
+}
+
+/* THE HELMHOLTZ WATERMARK */
+img.helmholtz-img {
+    height: 44px;
+    width: auto;
+}
+
+
+.helmholtz-bar-triangle {
+    position: relative;
+    float: right;
+    top: 95px;
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid rgb(0, 90, 160);
+    border-left: 25px solid transparent;
+}
+
+.navbar-default .navbar-nav>li.active a,.fallback_cb>ul>li.current_page_item>a {border-bottom: 4px solid rgb(240, 120, 30);}
+.navbar-default .navbar-nav>li>a:hover,.fallback_cb>ul>li>a:hover {color: #fff;border-bottom: 4px solid rgb(240, 120, 30);}
+/* overriding the properties of the main menu */
+.navbar-default .navbar-nav>li>a,.fallback_cb>ul>li>a {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 30px;
+    border-bottom: 5px solid transparent;
+    color: #fff!important;
+    font-size:20px;
+    font-family: Hermann-Bold, sans-serif;
+    -webkit-transition: all ease .2s;
+    -moz-transition: all ease .2s;
+    transition: all ease .2s; }
+
+/* removing the social bar, right next to the Logo */
+div.social-icons>a {
+    opacity: 0;
+}
+
+/* THE MAIN LOGO ON TOP */
+
+/* A wrapper for all the logo elements, which is placed inside the logo container of the theme */
+div.logo-wrapper {
+    height: 140px;
+    padding: 5px;
+    width: 400px;
+    /* background-color: white; */
+    font-family: Arial, sans-serif;
+
+}
+
+/* The container of the two big letters of the logo
+ background color of the structure of matters field and fixed quadratic size*/
+div.logo-letter-wrapper {
+    background-color: rgb(240, 120, 30);
+    position: relative;
+    float: left;
+
+    width: 130px;
+    height: 130px;
+
+}
+
+/* The actual text inside the orange boxes
+Centering the text horizontally and vertically */
+div.logo-letter-wrapper>p {
+    color: white;
+    position: absolute;
+
+    font-size: 110px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* The wrapper of the second big letter specifically */
+div#logo-second-letter-wrapper {
+    /* A little space between the two boxes */
+    margin-left: 15px;
+}
+
+/* The wrapper for the vertical text */
+div.logo-dts-wrapper {
+    margin-left: 12px;
+    position: relative;
+    float: left;
+
+    height:130px;
+    width: 60px;
+
+    /* actually rotating to be vertical */
+    transform: rotate(-90deg);
+}
+
+div.logo-dts-wrapper>p {
+    color: rgb(0, 90, 160);
+
+    position: absolute;
+    font-size: 60px;
+    letter-spacing: 5px;
+
+    /* Centering the actual text inside the wrapper horizontally and vertically */
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+div.logo-dts-wrapper>p>span {
+    color: white;
+}
+
+/* The little orange strip after the vertical text */
+div.after-logo-box {
+    margin-left: 12px;
+
+    background-color: rgb(240, 120, 30);
+
+    position: relative;
+    float: left;
+
+    height: 130px;
+    width: 25px;
+}
+
+
+/* THE SMALL ICON, that gets displayed in the main menu, when the page gets scrolled down */
+
+li.icon-wrapper {
+    margin-left: -140px;
+}
+
+div.logo-wrapper-small {
+    margin-top: 10px;
+    margin-right: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    float: left;
+
+    margin-bottom: -10px;
+}
+
+div.logo-letter-wrapper-small {
+    background-color: rgb(240, 120, 30);
+    position: relative;
+    float: left;
+
+    width: 40px;
+    height: 40px;
+
+}
+
+div.logo-letter-wrapper-small>p {
+    color: white;
+    position: absolute;
+
+    font-size: 30px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div#logo-second-letter-wrapper-small {
+    margin-left: 5px;
+}
+
+div.logo-dts-wrapper-small {
+    margin-left: 8px;
+    position: relative;
+    float: left;
+
+    height:40px;
+    width: 10px;
+
+    transform: rotate(-90deg);
+}
+
+div.logo-dts-wrapper-small>p {
+    color: white;
+
+    position: absolute;
+    font-size: 15px;
+    letter-spacing: 2px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+div.logo-dts-wrapper>p>span {
+    color: white;
+}
+
+div.after-logo-box-small {
+    margin-left: 8px;
+
+    background-color: rgb(240, 120, 30);
+
+    position: relative;
+    float: left;
+    bottom: 0px;
+
+    height: 40px;
+    width: 5px;
+}
+
+
+
+
+div.container {
+    width: 1170px;
+}
+
+div.sub-background {
+    background-image: url("img/bg_dots.png");
+    background-repeat: repeat-x;
+}
+
+div#subpage-banner {
+    display: none;
+}
+
+div.sidebar-wrap>div.widget {
+    background-color: white;
+    margin-bottom: 25px;
+    border-bottom: 0px;
+}
+
+div.sidebar-wrap {
+    background-color: rgba(0,0,0,0);
+    /*
+    background-image: url('img/bg_dots.png');
+    background-repeat: repeat-x;
+    background-position: 0.5px -62px;
+    background-color: #e8eaea;
+    */
+}
+
+.carousel-control.left {
+    text-shadow: none;
+    background-image: none;
+}
+
+.carousel-control.right {
+    text-shadow: none;
+    background-image: none;
+}
+
+.page-title {
+    color: rgb(0, 90, 160);
+    padding-bottom: 10px;
+}
